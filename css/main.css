@@ -1700,6 +1700,10 @@ button {
     .oc-block__text span {
       margin-top: 6px; } }
 
+@media screen and (max-width: 480px) {
+  .other-country {
+    grid-template-columns: repeat(auto-fill, 300px); } }
+
 @media screen and (max-width: 380px) {
   .other-country {
     margin-top: 27px; }
@@ -1709,7 +1713,10 @@ button {
     max-width: 283px; }
   .oc-block__text p {
     width: 100%;
-    max-width: 160px; } }
+    max-width: 160px; }
+  .content, .breadcrumps {
+    max-width: 100%;
+    padding: 0 13px; } }
 
 @media screen and (max-width: 320px) {
   .ht-offer-price__after {
