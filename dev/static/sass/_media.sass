@@ -52,8 +52,11 @@
       margin-left: 0
       align-items: flex-start
 
-
-
+@media screen and (max-width: 768px)
+  .ht-offer
+    grid-template-columns: repeat(auto-fill, 320px)
+  .ht-offer-block
+    max-width: 320px
 
 @media screen and (max-width: 480px)
   .icon-fire:after
@@ -64,7 +67,7 @@
   .buy-tour-media
     display: block
     margin-top: 13px
-    font-size: 14px
+    //font-size: 14px
   .icon-fire
     width: 46px
     height: 46px
@@ -84,10 +87,57 @@
   .buy-tour-text
     padding-left: 60px
     h2
-      line-height: 1
-      font-size: 20px
+      line-height: 24px
+      font-size: 24px
     span
       display: none
+      font-size: 16px
+  .content, .breadcrumps
+    max-width: 100%
+    padding: 0 28px
+  .content_murgin .block-text
+    margin-bottom: 30px
+  .line-grey_bg .content
+    padding-top: 20px
+    padding-bottom: 20px
+  .refresh-price
+    margin-bottom: 33px
+  .ht-offer
+    margin-top: 52px
+
+  //.block-text p
+  //  font-size: 14px
+  //  ine-height: 1.29
+  //.title
+  //  font-size: 20px
+  //  line-height: 1.1
+  //  margin-bottom: 15px
+
+  .oc-block__text
+    padding: 14px 8px 0px 13px
+    span
+      margin-top: 6px
+
+
+@media screen and (max-width: 380px)
+  .other-country
+    margin-top: 27px
+  .other-country
+    grid-template-columns: repeat(auto-fill,283px)
+  .oc-block
+    max-width: 283px
+  .oc-block__text p
+    width: 100%
+    max-width: 160px
+
+
+@media screen and (max-width: 320px)
+  .ht-offer-price__after
+    margin-left: 5px
+  .other-country
+    grid-template-columns: repeat(auto-fill,283px)
+  .oc-block
+    max-width: 283px
   .content, .breadcrumps
     max-width: 100%
     padding: 0 13px
@@ -98,15 +148,25 @@
     font-size: 20px
     line-height: 1.1
     margin-bottom: 15px
-  .other-country
-    grid-template-columns: repeat(auto-fill,283px)
-  .oc-block
-    max-width: 283px
-  .oc-block__text
-    padding: 14px 8px 0px 13px
+  .buy-tour-text
+    padding-left: 60px
+    h2
+      line-height: 1
+      font-size: 20px
     span
-      margin-top: 6px
-
-@media screen and (max-width: 320px)
-  .ht-offer-price__after
-    margin-left: 5px
+      display: none
+  .ht-offer
+    margin-top: 24px
+  .refresh-price
+    p
+      margin-bottom: 17px
+      &:before
+        top: 5px
+      span
+        font-size: 14px
+  .buy-tour-media
+    font-size: 14px
+    line-height: 1.29
+    margin-top: 16px
+  .block-text p
+    font-size: 14px

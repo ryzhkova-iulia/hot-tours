@@ -38,6 +38,7 @@
   font-weight: bold
   margin-top: 30px
   margin-bottom: 18px
+  line-height: 29px
 
 .block-text
   font-size: 16px
@@ -80,7 +81,7 @@
   //  content: ""
   //  flex: auto
   display: grid
-  grid-template-columns: repeat(auto-fill, 334px)
+  grid-template-columns: repeat(auto-fill, 354px)
   justify-content: space-between
 
   /* boring properties */
@@ -179,8 +180,7 @@
   padding: 0
   font-size: 20px
   line-height: 1
-  //color: lightgrey
-  //text-shadow: 1px 1px #bbb
+
 
 .rating-result > span:before
   content: '★'
@@ -326,6 +326,7 @@
   color: #FFFFFF
   font-weight: bold
   border: none
+  cursor: pointer
   span
     line-height: 0
     +flexBlockRow
@@ -384,16 +385,17 @@
 
 .other-country
   margin-top: 40px
+  margin-bottom: 57px
   display: grid
-  grid-template-columns: repeat(auto-fill, 354px)
+  grid-template-columns: repeat(auto-fill, 353px)
   justify-content: space-between
   /* boring properties */
   list-style: none
-  //margin: 0 auto
 
 .oc-block
   +flexBlockRow
   justify-content: flex-start
+  align-items: stretch
   flex-wrap: nowrap
   border-radius: 4px
   border: solid 2px #ff595f
@@ -408,17 +410,46 @@
   img
     width: 100%
 
+
 .oc-block__text
   padding: 14px 13px
+  +flexBlockColumn
+  justify-content: start
+  align-items: flex-start
   p
     font-size: 12px
     line-height: 1.17
     color: #686b6f
+    overflow: hidden
+    height: 42px
+    //&:before
+    //  content: ""
+    //  float: left
+    //  width: 5px
+    //  height: 42px
+    //& > *:first-child
+    //  float: right
+    //  width: 100%
+    //  margin-left: -5px
+    //&:after
+    //  content: "\02026"
+    //  box-sizing: content-box
+    //  float: right
+    //  position: absolute
+    //  right: 13px
+    //  bottom: 13px
+    //  width: 3em
+    //  margin-left: -3em
+    //  padding-right: 5px
+    //  text-align: right
+    //  background-size: 100% 100%
+    //  background: linear-gradient(to right, rgba(255, 255, 255, 0), white 50%, white)
   span
     font-weight: 600
     display: inline-block
     width: 100%
     text-align: right
+    margin-top: auto
 
 .oc-block__title
   font-weight: bold
