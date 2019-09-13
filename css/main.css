@@ -1283,7 +1283,8 @@ button {
   .rating-block span {
     font-weight: bold;
     font-size: 16px;
-    color: #28303d; }
+    color: #28303d;
+    padding-top: 2px; }
 
 .rating-result {
   padding-right: 9px; }
