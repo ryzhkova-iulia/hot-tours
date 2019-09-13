@@ -1,0 +1,112 @@
+@media screen and (max-width: 1400px)
+  .content
+    max-width: 1100px
+    margin: auto
+    padding: 0
+  .block-text
+    margin-bottom: 27px
+    p
+      max-width: 823px
+  .other-country
+    justify-content: left
+    grid-gap: 20px
+  .oc-block
+    margin-bottom: 0
+
+@media screen and (max-width: 1150px)
+  .content, .breadcrumps
+    max-width: 100%
+    padding: 0 40px
+
+@media screen and (max-width: 1090px)
+  .block-text
+    +flexBlockColumn
+    align-items: flex-start
+    p
+      max-width: 100%
+      margin-bottom: 19px
+    .title
+      margin-bottom: 21px
+  .visa
+    //margin-top: 19px
+    flex-direction: row-reverse
+    &:after
+      margin-left: 0
+      margin-right: 7px
+  .ht-offer
+    grid-template-columns: repeat(auto-fill, 290px)
+  .ht-offer-block
+    margin-bottom: 36px
+
+@media screen and (max-width: 967px)
+  .ht-offer
+    +flexBlockRow
+
+
+@media screen and (max-width: 930px)
+  .refresh-price
+    flex-direction: column-reverse
+    align-items: flex-start
+    p
+      margin-bottom: 20px
+      margin-left: 0
+      align-items: flex-start
+
+
+
+
+@media screen and (max-width: 480px)
+  .icon-fire:after
+    background: url(../img/content/shape-small.svg) no-repeat 50%
+  .content, .breadcrumps
+    max-width: 100%
+    padding: 0 30px
+  .buy-tour-media
+    display: block
+    margin-top: 13px
+    font-size: 14px
+  .icon-fire
+    width: 46px
+    height: 46px
+  .ht-offer-block
+    max-width: 100%
+  .ht-offer-item
+    max-width: 100%
+  .ht-offer-price__after
+    font-size: 30px
+    //margin-left: 5px
+  .arrow-wr
+    width: 33px
+    height: 33px
+    background: url(../img/content/arrow-wr-small.svg) no-repeat 50%
+  .ht-offer-price
+    padding: 17px 8px 19px
+  .buy-tour-text
+    padding-left: 60px
+    h2
+      line-height: 1
+      font-size: 20px
+    span
+      display: none
+  .content, .breadcrumps
+    max-width: 100%
+    padding: 0 13px
+  .block-text p
+    font-size: 14px
+    ine-height: 1.29
+  .title
+    font-size: 20px
+    line-height: 1.1
+    margin-bottom: 15px
+  .other-country
+    grid-template-columns: repeat(auto-fill,283px)
+  .oc-block
+    max-width: 283px
+  .oc-block__text
+    padding: 14px 8px 0px 13px
+    span
+      margin-top: 6px
+
+@media screen and (max-width: 320px)
+  .ht-offer-price__after
+    margin-left: 5px

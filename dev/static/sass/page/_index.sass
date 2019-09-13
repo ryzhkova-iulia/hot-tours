@@ -1,0 +1,442 @@
+.content
+  width: 100%
+  padding: 0 37px
+  &_murgin
+    .title
+      margin-top: 50px
+    .block-text
+      margin-bottom: 60px
+      p
+        width: 100%
+        max-width: 1025px
+        line-height: 1.38
+
+.breadcrumps
+  padding: 4px 37px
+  line-height: normal
+.breadcrumps a
+  font-size: 12px
+  color: #697b83
+  display: inline-block
+  position: relative
+  padding-right: 13px
+  margin-right: 8px
+  &:after
+    content: "\f105"
+    position: absolute
+    right: 0
+    bottom: 0
+    font: normal normal normal 14px/1 FontAwesome
+  &:hover
+    color: #1475c1
+  &:last-child
+    &:after
+      display: none
+
+.title
+  font-size: 24px
+  font-weight: bold
+  margin-top: 30px
+  margin-bottom: 18px
+
+.block-text
+  font-size: 16px
+  font-weight: normal
+  font-style: normal
+  font-stretch: normal
+  line-height: 1.25
+  letter-spacing: normal
+  color: #2e333b
+  margin-bottom: 40px
+  +flexBlockRow
+  align-items: flex-end
+  p
+    width: 100%
+    max-width: 897px
+  .title
+    margin-bottom: 0
+.visa
+  font-size: 16px
+  font-weight: bold
+  line-height: 1.06
+  color: #2ab396
+  +flexBlockRow
+
+  &:after
+    content: ""
+    background: url("../img/content/vector.svg") no-repeat center
+    background-size: cover
+    width: 20px
+    height: 20px
+    display: inline-block
+    margin-left: 4px
+
+.ht-offer
+  //+flexBlockRow
+  //margin-bottom: 38px
+  //padding: 1em
+  //margin: 3em auto
+  //&:after
+  //  content: ""
+  //  flex: auto
+  display: grid
+  grid-template-columns: repeat(auto-fill, 334px)
+  justify-content: space-between
+
+  /* boring properties */
+  list-style: none
+  margin: 0 auto
+
+  &__title
+    color: #1771bf
+    font-size: 20px
+    font-weight: bold
+    width: 100%
+    margin-bottom: 10px
+
+.ht-offer-block
+  border-radius: 4px
+  border: solid 1px #c5d2db
+  width: 100%
+  max-width: 354px
+  margin-bottom: 40px
+
+.ht-offer-item
+  width: 100%
+  max-width: 354px
+  position: relative
+  &:before
+    position: absolute
+    z-index: 100
+    content: "— 25%"
+    display: inline-block
+    background-color: #ff595f
+    color: #FFFFFF
+    font-size: 20px
+    font-weight: bold
+    padding: 7px 7px 10px 10px
+    top: 9px
+    border-radius: 0 4px 4px 0
+  &_img
+    width: 100%
+    height: auto
+    position: relative
+    &:after
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.27) 47%, rgba(0, 0, 0, 0.6))
+  img
+    width: 100%
+
+
+.js-offers
+  position: relative
+  .slick-dots
+    position: absolute
+    bottom: 0
+    margin-bottom: 10px
+  .slick-dots li
+    width: 7px
+    height: 7px
+    background-color: #FFFFFF
+    opacity: 0.38
+    border-radius: 50%
+  .slick-dots li.slick-active
+    opacity: 1
+  .slick-dots li button
+    width: 0
+    height: 0
+.js-offers.slick-dotted.slick-slider
+  margin-bottom: 0
+
+.ht-offer-content
+  padding: 0 10px
+  +flexBlockColumn
+  align-items: flex-start
+
+.ht-rate
+  +flexBlockRow
+  padding: 10px 0
+  width: 100%
+
+.rating-block
+  +flexBlockRow
+  justify-content: flex-start
+
+  span
+    font-weight: bold
+    font-size: 16px
+    color: #28303d
+
+//рейтинг звездочки
+.rating-result
+  padding-right: 9px
+.rating-result span
+  padding: 0
+  font-size: 20px
+  line-height: 1
+  //color: lightgrey
+  //text-shadow: 1px 1px #bbb
+
+.rating-result > span:before
+  content: '★'
+
+.rating-result > span.active
+  color: #ffc241
+//рейтинг звездочки
+
+.ht-icons
+  +flexBlockRow
+  justify-content: flex-start
+  &__item
+    width: 24px
+    height: 24px
+    content: ""
+    background-size: cover
+    margin-left: 4px
+    &_plus
+      background: url("../img/content/plus.svg") no-repeat center
+    &_auto
+      background: url("../img/content/auto-icon.svg") no-repeat center
+    &_avia
+      background: url("../img/content/avia-icon.svg") no-repeat center
+    &_key
+      background: url("../img/content/key-icon.svg") no-repeat center
+
+.ht-country
+  font-size: 14px
+  color: #28303d
+  display: flex
+  margin-bottom: 5px
+  &:before
+    content: ""
+    background-size: cover
+    display: inline-block
+    margin-right: 5px
+    width: 10px
+    height: 14px
+    background: url("../img/content/if-location.svg") no-repeat center
+
+.ht-offer-text
+  font-size: 14px
+  line-height: 1.57
+  +flexBlockRow
+  align-items: flex-end
+  margin-bottom: 10px
+
+  span
+    border: 1px solid
+    border-radius: 50%
+    width: 20px
+    height: 20px
+    display: inline-block
+    text-align: center
+    line-height: 1.3
+
+.ht-offer-price
+  background-color: #e6eff5
+  padding: 17px 10px 19px
+  +flexBlockRow
+  justify-content: flex-start
+  &__before
+    font-size: 22px
+    font-weight: bold
+    +flexBlockRow
+    justify-content: flex-start
+    align-items: center
+    line-height: 1.09
+    span
+      position: relative
+      &:after
+        position: absolute
+        content: ""
+        background-size: cover
+        display: inline-block
+        width: 50px
+        height: 27px
+        background: url("../img/content/line.svg") no-repeat center
+        left: 0
+        right: 0
+        margin: auto
+    &:after
+      content: "\f158"
+      display: inline-block
+      margin-left: 3px
+      font: normal normal normal 14px/1 FontAwesome
+      font-size: 12px
+      margin-bottom: -4px
+      font-weight: bold
+  &__after
+    font-size: 35px
+    font-weight: bold
+    margin-left: 15px
+    +flexBlockRow
+    justify-content: flex-start
+    align-items: center
+    line-height: 1.09
+    &:after
+      content: "\f158"
+      display: inline-block
+      margin-left: 3px
+      font: normal normal normal 14px/1 FontAwesome
+      font-size: 16px
+      margin-bottom: -4px
+      font-weight: bold
+
+.arrow-wr
+  background-size: cover
+  display: inline-block
+  width: 41px
+  height: 41px
+  background: url("../img/content/arrow-wr.svg") no-repeat center
+  margin-left: auto
+
+.refresh-price
+  +flexBlockRow
+  justify-content: flex-start
+  margin-bottom: 44px
+  p
+    margin-left: 12px
+    //+flexBlockRow
+    line-height: 1.31
+    //flex-wrap: nowrap
+    position: relative
+    span
+      display: inline-block
+      padding-left: 27px
+    &:before
+      position: absolute
+      content: ""
+      background-size: cover
+      display: inline-block
+      margin-right: 6px
+      width: 21px
+      height: 21px
+      background: url("../img/content/icon-!.svg") no-repeat center
+
+.refresh-btn
+  width: 252px
+  height: 43px
+  border-radius: 4px
+  background-color: #ff595f
+  color: #FFFFFF
+  font-weight: bold
+  border: none
+  span
+    line-height: 0
+    +flexBlockRow
+    justify-content: center
+  span:after
+    content: ""
+    background-size: cover
+    margin-left: 8px
+    display: inline-block
+    width: 17px
+    height: 22px
+    background: url("../img/content/refresh.svg") no-repeat center
+
+
+.line-grey
+  width: 100%
+  height: 19px
+  background-color: #ecf0f7
+  &_bg
+    height: initial
+    .content
+      padding-top: 35px
+      padding-bottom: 35px
+.buy-tour
+  position: relative
+
+
+.icon-fire
+  width: 68px
+  height: 68px
+  background-color: #ff595f
+  border-radius: 50%
+  +flexBlockRow
+  justify-content: center
+  align-items: center
+  position: absolute
+  top: 0
+  &:after
+    content: ""
+    background-size: cover
+    display: inline-block
+    width: 26px
+    height: 35px
+    background: url("../img/content/shape.svg") no-repeat center
+.buy-tour-text
+  padding-left: 88px
+  h2
+    line-height: 1.5
+    margin-bottom: 4px
+  span
+    line-height: 1.5
+
+.buy-tour-media
+  line-height: 1.5
+  display: none
+
+.other-country
+  margin-top: 40px
+  display: grid
+  grid-template-columns: repeat(auto-fill, 354px)
+  justify-content: space-between
+  /* boring properties */
+  list-style: none
+  //margin: 0 auto
+
+.oc-block
+  +flexBlockRow
+  justify-content: flex-start
+  flex-wrap: nowrap
+  border-radius: 4px
+  border: solid 2px #ff595f
+  width: 100%
+  max-width: 354px
+  position: relative
+  margin-bottom: 21px
+
+.oc-block__image
+  width: 100%
+  max-width: 109px
+  img
+    width: 100%
+
+.oc-block__text
+  padding: 14px 13px
+  p
+    font-size: 12px
+    line-height: 1.17
+    color: #686b6f
+  span
+    font-weight: 600
+    display: inline-block
+    width: 100%
+    text-align: right
+
+.oc-block__title
+  font-weight: bold
+  margin-bottom: 6px
+
+.triangle
+  width: 0
+  height: 0
+  border-top: 56px solid #ff595f
+  border-right: 56px solid transparent
+  position: absolute
+  top: 0
+  left: 0
+  &:after
+    content: "%"
+    color: #FFFFFF
+    font-size: 19px
+    font-weight: bold
+    position: absolute
+    top: -48px
+    left: 7px
