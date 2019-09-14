@@ -1176,6 +1176,8 @@ button {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap; }
+  .visa_red {
+    color: #ff595f; }
   .visa:after {
     content: "";
     background: url("../img/content/vector.svg") no-repeat center;
@@ -1185,11 +1187,14 @@ button {
     display: inline-block;
     margin-left: 4px; }
 
+.visa.visa_red:after {
+  background: url("../img/content/icon-!-red.svg") no-repeat center; }
+
 .ht-offer {
   display: grid;
   grid-template-columns: repeat(auto-fill, 354px);
-  justify-content: space-between;
-  /* boring properties */
+  justify-content: flex-start;
+  grid-gap: 19px;
   list-style: none;
   margin: 0 auto; }
   .ht-offer__title {
@@ -1205,6 +1210,8 @@ button {
   width: 100%;
   max-width: 354px;
   margin-bottom: 40px; }
+  .ht-offer-block:hover {
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3); }
 
 .ht-offer-item {
   width: 100%;
@@ -1219,12 +1226,17 @@ button {
     color: #FFFFFF;
     font-size: 20px;
     font-weight: bold;
-    padding: 7px 7px 10px 10px;
+    height: 40px;
+    width: 84px;
+    text-align: center;
+    line-height: 24px;
+    padding-top: 7px;
     top: 9px;
     border-radius: 0 4px 4px 0; }
   .ht-offer-item_img {
     width: 100%;
-    height: auto;
+    height: 184px;
+    overflow: hidden;
     position: relative; }
     .ht-offer-item_img:after {
       content: "";
@@ -1295,10 +1307,55 @@ button {
   line-height: 1; }
 
 .rating-result > span:before {
-  content: '★'; }
+  content: "";
+  background: url("../img/content/star-icon.svg") no-repeat center;
+  background-size: cover;
+  width: 16px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 3px; }
 
 .rating-result > span.active {
   color: #ffc241; }
+
+.tooltip {
+  display: none;
+  width: 110px;
+  position: absolute;
+  padding: 8px 0;
+  top: -39px;
+  left: -50%;
+  transform: translate(-30%, 0);
+  font-size: 14px;
+  text-align: center;
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5);
+  line-height: 1.07;
+  font-weight: 600;
+  z-index: 50; }
+  .tooltip:after {
+    content: ' ';
+    position: absolute;
+    display: block;
+    left: 50%;
+    bottom: -6px;
+    z-index: -10;
+    width: 14px;
+    height: 14px;
+    border-width: 1px;
+    background-color: #fff;
+    box-shadow: 2px 2px 3px -1px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, 0) rotate(45deg); }
+  .tooltip_plus {
+    top: -53px;
+    width: 120px; }
+  .tooltip_auto {
+    transform: translate(-29%, 0); }
+  .tooltip_avia {
+    transform: translate(-28%, 0); }
+  .tooltip_key {
+    transform: translate(-28%, 0); }
 
 .ht-icons {
   display: flex;
@@ -1311,15 +1368,38 @@ button {
     height: 24px;
     content: "";
     background-size: cover;
-    margin-left: 4px; }
+    margin-left: 4px;
+    cursor: pointer;
+    transition: 0.5s;
+    position: relative; }
     .ht-icons__item_plus {
       background: url("../img/content/plus.svg") no-repeat center; }
+      .ht-icons__item_plus:hover {
+        background: url("../img/content/plus-blue.svg") no-repeat center;
+        transition: 0.5s; }
+        .ht-icons__item_plus:hover .tooltip_plus {
+          display: block; }
     .ht-icons__item_auto {
       background: url("../img/content/auto-icon.svg") no-repeat center; }
+      .ht-icons__item_auto:hover {
+        background: url("../img/content/auto-icon-blue.svg") no-repeat center;
+        transition: 0.5s; }
+        .ht-icons__item_auto:hover .tooltip_auto {
+          display: block; }
     .ht-icons__item_avia {
       background: url("../img/content/avia-icon.svg") no-repeat center; }
+      .ht-icons__item_avia:hover {
+        background: url("../img/content/avia-icon-blue.svg") no-repeat center;
+        transition: 0.5s; }
+        .ht-icons__item_avia:hover .tooltip_avia {
+          display: block; }
     .ht-icons__item_key {
       background: url("../img/content/key-icon.svg") no-repeat center; }
+      .ht-icons__item_key:hover {
+        background: url("../img/content/key-icon-blue.svg") no-repeat center;
+        transition: 0.5s; }
+        .ht-icons__item_key:hover .tooltip_key {
+          display: block; }
 
 .ht-country {
   font-size: 14px;
@@ -1343,8 +1423,10 @@ button {
   align-items: center;
   flex-wrap: wrap;
   align-items: flex-end;
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  position: relative; }
   .ht-offer-text span {
+    cursor: pointer;
     border: 1px solid;
     border-radius: 50%;
     width: 20px;
@@ -1352,10 +1434,29 @@ button {
     display: inline-block;
     text-align: center;
     line-height: 1.3; }
+    .ht-offer-text span:hover {
+      color: #1771bf; }
+      .ht-offer-text span:hover + .tooltip_more {
+        display: block;
+        transition: 1.5s; }
+
+.more {
+  position: relative; }
+
+.tooltip_more {
+  width: 197px;
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: left;
+  padding: 9px 12px;
+  transform: translate(-40%, 0);
+  top: initial;
+  bottom: 30px;
+  font-weight: normal; }
 
 .ht-offer-price {
   background-color: #e6eff5;
-  padding: 17px 10px 19px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -1453,6 +1554,8 @@ button {
   font-weight: bold;
   border: none;
   cursor: pointer; }
+  .refresh-btn:hover {
+    background-color: #e73e44; }
   .refresh-btn span {
     line-height: 0;
     display: flex;
@@ -1538,6 +1641,8 @@ button {
   max-width: 354px;
   position: relative;
   margin-bottom: 21px; }
+  .oc-block:hover {
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.23); }
 
 .oc-block__image {
   width: 100%;
@@ -1603,9 +1708,23 @@ button {
     margin-bottom: 0; } }
 
 @media screen and (max-width: 1150px) {
+  .ht-offer-text span {
+    margin-left: -5px; }
+  .tooltip_more {
+    transform: translate(-44%); }
   .content, .breadcrumps {
     max-width: 100%;
-    padding: 0 40px; } }
+    padding: 0 40px; }
+  .ht-offer {
+    grid-template-columns: repeat(auto-fill, 290px);
+    grid-gap: 13px; }
+  .ht-offer-price__after {
+    font-size: 30px;
+    margin-left: 5px; }
+  .arrow-wr {
+    width: 33px;
+    height: 33px;
+    background: url(../img/content/arrow-wr-small.svg) no-repeat 50%; } }
 
 @media screen and (max-width: 1090px) {
   .block-text {
@@ -1624,17 +1743,12 @@ button {
     .visa:after {
       margin-left: 0;
       margin-right: 7px; }
-  .ht-offer {
-    grid-template-columns: repeat(auto-fill, 290px); }
   .ht-offer-block {
     margin-bottom: 36px; } }
 
-@media screen and (max-width: 967px) {
-  .ht-offer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; } }
+@media screen and (max-width: 976px) {
+  .ht-offer-text span {
+    margin-left: -5px; } }
 
 @media screen and (max-width: 930px) {
   .refresh-price {
@@ -1645,11 +1759,18 @@ button {
       margin-left: 0;
       align-items: flex-start; } }
 
-@media screen and (max-width: 768px) {
-  .ht-offer {
-    grid-template-columns: repeat(auto-fill, 320px); }
+@media screen and (max-width: 703px) {
   .ht-offer-block {
-    max-width: 320px; } }
+    max-width: 421px;
+    margin-right: 0; } }
+
+@media screen and (max-width: 672px) {
+  .ht-offer {
+    grid-template-columns: repeat(auto-fill, 421px);
+    display: flex;
+    flex-direction: column; }
+  .ht-offer-item {
+    max-width: 100%; } }
 
 @media screen and (max-width: 480px) {
   .icon-fire:after {
@@ -1669,10 +1790,6 @@ button {
     max-width: 100%; }
   .ht-offer-price__after {
     font-size: 30px; }
-  .arrow-wr {
-    width: 33px;
-    height: 33px;
-    background: url(../img/content/arrow-wr-small.svg) no-repeat 50%; }
   .ht-offer-price {
     padding: 17px 8px 19px; }
   .buy-tour-text {
@@ -1718,7 +1835,29 @@ button {
     max-width: 100%;
     padding: 0 13px; } }
 
+@media screen and (max-width: 440px) {
+  .tooltip_more {
+    left: inherit;
+    transform: translate(0);
+    right: -25px; }
+  .tooltip:after {
+    left: initial;
+    right: 21px; } }
+
+@media screen and (max-width: 333px) {
+  .ht-offer-content {
+    padding: 0 6px; }
+  .ht-offer-text span {
+    margin-left: -7px; }
+  .tooltip_more {
+    right: -12px; }
+  .tooltip:after {
+    right: 9px; } }
+
 @media screen and (max-width: 320px) {
+  .ht-offer-text span {
+    width: 19px;
+    height: 19px; }
   .ht-offer-price__after {
     margin-left: 5px; }
   .other-country {

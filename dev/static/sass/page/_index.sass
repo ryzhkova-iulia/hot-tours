@@ -62,7 +62,8 @@
   line-height: 1.06
   color: #2ab396
   +flexBlockRow
-
+  &_red
+    color: $pink-red
   &:after
     content: ""
     background: url("../img/content/vector.svg") no-repeat center
@@ -72,22 +73,16 @@
     display: inline-block
     margin-left: 4px
 
+.visa.visa_red:after
+  background: url("../img/content/icon-!-red.svg") no-repeat center
+
 .ht-offer
-  //+flexBlockRow
-  //margin-bottom: 38px
-  //padding: 1em
-  //margin: 3em auto
-  //&:after
-  //  content: ""
-  //  flex: auto
   display: grid
   grid-template-columns: repeat(auto-fill, 354px)
-  justify-content: space-between
-
-  /* boring properties */
+  justify-content: flex-start
+  grid-gap: 19px
   list-style: none
   margin: 0 auto
-
   &__title
     color: #1771bf
     font-size: 20px
@@ -101,6 +96,11 @@
   width: 100%
   max-width: 354px
   margin-bottom: 40px
+  &:hover
+    box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.3)
+  //margin-right: 19px
+  //&:last-child
+  //  margin-right: 0
 
 .ht-offer-item
   width: 100%
@@ -115,13 +115,20 @@
     color: #FFFFFF
     font-size: 20px
     font-weight: bold
-    padding: 7px 7px 10px 10px
+    //padding: 7px 7px 10px 10px
+    height: 40px
+    width: 84px
+    text-align: center
+    line-height: 24px
+    padding-top: 7px
     top: 9px
     border-radius: 0 4px 4px 0
   &_img
     width: 100%
-    height: auto
+    height: 184px
+    overflow: hidden
     position: relative
+
     &:after
       content: ""
       position: absolute
@@ -167,7 +174,6 @@
 .rating-block
   +flexBlockRow
   justify-content: flex-start
-
   span
     font-weight: bold
     font-size: 16px
@@ -184,11 +190,59 @@
 
 
 .rating-result > span:before
-  content: '★'
+  //content: '★'
+  content: ""
+  background: url("../img/content/star-icon.svg") no-repeat center
+  background-size: cover
+  width: 16px
+  height: 15px
+  display: inline-block
+  margin-right: 3px
 
 .rating-result > span.active
   color: #ffc241
 //рейтинг звездочки
+
+.tooltip
+  display: none
+  width: 110px
+  position: absolute
+  padding: 8px 0
+  top: -39px
+  left: -50%
+  transform: translate(-30%, 0)
+  font-size: 14px
+  text-align: center
+  background-color: #FFFFFF
+  border-radius: 4px
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.5)
+  line-height: 1.07
+  font-weight: 600
+  z-index: 50
+
+  &:after
+    content: ' '
+    position: absolute
+    display: block
+    left: 50%
+    bottom: -6px
+    z-index: -10
+    width: 14px
+    height: 14px
+    border-width: 1px
+    background-color: #fff
+    box-shadow: 2px 2px 3px -1px rgba(0,0,0,.5)
+    transform: translate(-50%, 0) rotate(45deg)
+  &_plus
+    top: -53px
+    width: 120px
+  &_auto
+    transform: translate(-29%, 0)
+  &_avia
+    transform: translate(-28%, 0)
+  &_key
+    transform: translate(-28%, 0)
+
 
 .ht-icons
   +flexBlockRow
@@ -199,14 +253,38 @@
     content: ""
     background-size: cover
     margin-left: 4px
+    cursor: pointer
+    transition: 0.5s
+    position: relative
     &_plus
       background: url("../img/content/plus.svg") no-repeat center
+      &:hover
+        background: url("../img/content/plus-blue.svg") no-repeat center
+        transition: 0.5s
+        .tooltip_plus
+          display: block
     &_auto
       background: url("../img/content/auto-icon.svg") no-repeat center
+      &:hover
+        background: url("../img/content/auto-icon-blue.svg") no-repeat center
+        transition: 0.5s
+        .tooltip_auto
+          display: block
     &_avia
       background: url("../img/content/avia-icon.svg") no-repeat center
+      &:hover
+        background: url("../img/content/avia-icon-blue.svg") no-repeat center
+        transition: 0.5s
+        .tooltip_avia
+          display: block
     &_key
       background: url("../img/content/key-icon.svg") no-repeat center
+      &:hover
+        background: url("../img/content/key-icon-blue.svg") no-repeat center
+        transition: 0.5s
+        .tooltip_key
+          display: block
+
 
 .ht-country
   font-size: 14px
@@ -228,8 +306,9 @@
   +flexBlockRow
   align-items: flex-end
   margin-bottom: 10px
-
+  position: relative
   span
+    cursor: pointer
     border: 1px solid
     border-radius: 50%
     width: 20px
@@ -238,9 +317,29 @@
     text-align: center
     line-height: 1.3
 
+    &:hover
+      color: #1771bf
+      & + .tooltip_more
+        display: block
+        transition: 1.5s
+
+.more
+  position: relative
+
+.tooltip_more
+  width: 197px
+  font-size: 14px
+  line-height: 1.21
+  text-align: left
+  padding: 9px 12px
+  transform: translate(-40%, 0)
+  top: initial
+  bottom: 30px
+  font-weight: normal
+
 .ht-offer-price
   background-color: #e6eff5
-  padding: 17px 10px 19px
+  padding: 10px 10px
   +flexBlockRow
   justify-content: flex-start
   &__before
@@ -328,6 +427,8 @@
   font-weight: bold
   border: none
   cursor: pointer
+  &:hover
+    background-color: #e73e44
   span
     line-height: 0
     +flexBlockRow
@@ -404,6 +505,8 @@
   max-width: 354px
   position: relative
   margin-bottom: 21px
+  &:hover
+    box-shadow: 0 6px 9px 0 rgba(0, 0, 0, 0.23)
 
 .oc-block__image
   width: 100%
