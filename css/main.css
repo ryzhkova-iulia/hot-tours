@@ -1842,7 +1842,23 @@ button {
     right: -25px; }
   .tooltip:after {
     left: initial;
-    right: 21px; } }
+    right: 21px; }
+  .tooltip_plus {
+    transform: translate(-60%); }
+    .tooltip_plus:after {
+      right: 10px; }
+  .tooltip_auto {
+    transform: translate(-63%); }
+    .tooltip_auto:after {
+      right: 3px; }
+  .tooltip_avia {
+    transform: translate(-62%); }
+    .tooltip_avia:after {
+      right: 4px; }
+  .tooltip_key {
+    transform: translate(-63%); }
+    .tooltip_key:after {
+      right: 3px; } }
 
 @media screen and (max-width: 333px) {
   .ht-offer-content {
