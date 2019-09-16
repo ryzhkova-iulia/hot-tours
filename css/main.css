@@ -1623,7 +1623,8 @@ button {
   margin-bottom: 57px;
   display: grid;
   grid-template-columns: repeat(auto-fill, 353px);
-  justify-content: space-between;
+  justify-content: left;
+  grid-gap: 20px;
   /* boring properties */
   list-style: none; }
 
@@ -1691,6 +1692,10 @@ button {
     position: absolute;
     top: -48px;
     left: 7px; }
+
+@media screen and (min-width: 1900px) {
+  .ht-offer {
+    grid-template-columns: repeat(auto-fill, 350px); } }
 
 @media screen and (max-width: 1400px) {
   .content {
