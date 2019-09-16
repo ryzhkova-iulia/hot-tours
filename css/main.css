@@ -1196,7 +1196,8 @@ button {
   justify-content: flex-start;
   grid-gap: 19px;
   list-style: none;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-bottom: 40px; }
   .ht-offer__title {
     color: #1771bf;
     font-size: 20px;
@@ -1745,9 +1746,7 @@ button {
     flex-direction: row-reverse; }
     .visa:after {
       margin-left: 0;
-      margin-right: 7px; }
-  .ht-offer-block {
-    margin-bottom: 36px; } }
+      margin-right: 7px; } }
 
 @media screen and (max-width: 976px) {
   .ht-offer-text span {
