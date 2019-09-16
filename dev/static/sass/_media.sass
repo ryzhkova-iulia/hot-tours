@@ -1,13 +1,4 @@
 
-//@media screen and (max-width: 1900px)
-//  .ht-offer-block:nth-child(4)
-//    margin-right: 0
-//
-//@media screen and (max-width: 1546px)
-//  .ht-offer-block:nth-child(4)
-//    margin-right: 19px
-//  .ht-offer-block:nth-child(3)
-//    margin-right: 0
 
 @media screen and (min-width: 1900px)
   .ht-offer
@@ -36,9 +27,11 @@
   .content, .breadcrumps
     max-width: 100%
     padding: 0 40px
-  .ht-offer
-    grid-template-columns: repeat(auto-fill, 290px)
-    grid-gap: 13px
+  //.ht-offer
+  //  grid-template-columns: repeat(auto-fill, 300px)
+  //.ht-offer-block
+  //  grid-template-columns: repeat(auto-fill, 330px)
+  //  grid-gap: 13px
   .ht-offer-price__after
     font-size: 30px
     margin-left: 5px
@@ -48,6 +41,9 @@
     background: url(../img/content/arrow-wr-small.svg) no-repeat 50%
 
 @media screen and (max-width: 1090px)
+  .ht-offer
+    grid-template-columns: repeat(3, minmax(280px, 1fr))
+
   .block-text
     +flexBlockColumn
     align-items: flex-start
@@ -61,8 +57,7 @@
     &:after
       margin-left: 0
       margin-right: 7px
-  //.ht-offer
-  //  grid-template-columns: repeat(auto-fill, 290px)
+
   .ht-offer-block
     margin-bottom: 36px
 
@@ -79,6 +74,8 @@
       margin-bottom: 20px
       margin-left: 0
       align-items: flex-start
+  .ht-offer
+    grid-template-columns: repeat(2, minmax(280px, 1fr))
 
 @media screen and (max-width: 703px)
   .ht-offer-block
@@ -88,10 +85,14 @@
 @media screen and (max-width: 672px)
   .ht-offer
     grid-template-columns: repeat(auto-fill, 421px)
-    display: flex
-    flex-direction: column
+    //display: flex
+    //flex-direction: column
   .ht-offer-item
     max-width: 100%
+
+@media screen and (max-width: 520px)
+  .ht-offer
+    grid-template-columns: repeat(auto-fill, 100%)
 
 @media screen and (max-width: 480px)
   .icon-fire:after
